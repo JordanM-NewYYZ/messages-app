@@ -38,6 +38,6 @@ angular
       //   controllerAs: 'about'
       // })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/inbox'
       });
   });

@@ -8,10 +8,7 @@
  * Controller of the messagesApp
  */
 angular.module('messagesApp')
-  .controller('InboxCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('InboxCtrl', 
+  	function InboxCtrl () {
+  	    this.title = "NTG Messaging"
   });

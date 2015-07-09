@@ -8,10 +8,8 @@
  * Controller of the messagesApp
  */
 angular.module('messagesApp')
-  .controller('EmailCtrl', function EmailCtrl () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('EmailCtrl', 
+  	function EmailCtrl () {
+    
+    this.title = "Loading..."
   });
