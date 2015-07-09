@@ -19,11 +19,17 @@ angular
   ])
   .config(function ($routeProvider) {
     'use strict';
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/inbox', {
+        templateUrl: 'views/inbox.html',
+        controller: 'InboxCtrl',
+        controllerAs: 'inbox'
       })
 
       // .when('/about', {
