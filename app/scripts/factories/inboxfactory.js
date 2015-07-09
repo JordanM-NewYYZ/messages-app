@@ -9,15 +9,15 @@
  */
 angular.module('messagesApp')
   .factory('InboxFactory', 
-    function InboxFactory () {
+    function InboxFactory ($http) {
       var exports = {};
 
-      exports.messages = []
+      exports.messages = [];
 
 
-      exports.getMessages = function() {
-        return $http.get('/json/emails.json'); // This is where a real backend would go in the future
-      }
+      exports.getMessages = function () {
+        return $http.get('json/emails.json'); // This is where a real backend would go in the future
+      };
 
 
 

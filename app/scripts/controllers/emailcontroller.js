@@ -11,5 +11,4 @@ angular.module('messagesApp')
   .controller('EmailCtrl', 
   	function EmailCtrl () {
     
-    this.title = "Loading..."
   });

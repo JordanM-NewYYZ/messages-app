@@ -9,16 +9,6 @@
  */
 angular.module('messagesApp')
   .factory('EmailFactory', 
-    function EmailFactory () {
-    // Service logic
-    // ...
+    function EmailFactory () { 
 
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+  	});
