@@ -22,8 +22,6 @@ angular.module('messagesApp')
 
 
 
-
-
       return exports;
 
   });

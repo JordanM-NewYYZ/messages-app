@@ -1,0 +1,10 @@
+<div class="ntg__inbox">
+	<div class="ntg__inbox__search-bar">
+		You have {{ inbox.messages.length && inbox.messages.length || 'no' }} unread messages.
+	</div>
+
+	<div ng-hide="!inbox.messages.length">
+		<input type="text" class="ntg__inbox__search" ng-model="inbox.search" placeholder="Search">
+	</div>
+
+</div>
