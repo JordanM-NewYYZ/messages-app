@@ -9,6 +9,9 @@
  */
 angular.module('messagesApp')
   .controller('InboxCtrl', 
-  	function InboxCtrl () {
+  	function InboxCtrl (InboxFactory) {
   	    this.title = "NTG Messaging"
+
+  	    console.log(InboxFactory);
+
   });

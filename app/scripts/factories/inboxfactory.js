@@ -8,16 +8,17 @@
  * Factory in the messagesApp.
  */
 angular.module('messagesApp')
-  .factory('InboxFactory', function () {
-    // Service logic
-    // ...
+  .factory('InboxFactory', 
+    function InboxFactory () {
+      var exports = {};
 
-    var meaningOfLife = 42;
+      exports.messages = []
 
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
+
+
+
+
+
+      return exports;
+
   });
