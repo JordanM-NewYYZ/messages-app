@@ -16,6 +16,11 @@
         controller: 'InboxCtrl',
         controllerAs: 'inbox'
       })
+      .when('/inbox/message/:id', {
+        templateUrl: 'views/message.html',
+        controller: 'MessageCtrl',
+        controllerAs: 'message'
+      })
       .otherwise({
         redirectTo: '/inbox'
       });
