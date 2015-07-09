@@ -1,14 +1,4 @@
-'use strict';
-
-/**
- * @ngdoc overview
- * @name messagesApp
- * @description
- * # messagesApp
- *
- * Main module of the application.
- */
-angular
+(angular
   .module('messagesApp', [
     'ngAnimate',
     'ngCookies',
@@ -21,23 +11,12 @@ angular
     'use strict';
 
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
       .when('/inbox', {
         templateUrl: 'views/inbox.html',
         controller: 'InboxCtrl',
         controllerAs: 'inbox'
       })
-
-      // .when('/about', {
-      //   templateUrl: 'views/about.html',
-      //   controller: 'AboutCtrl',
-      //   controllerAs: 'about'
-      // })
       .otherwise({
         redirectTo: '/inbox'
       });
-  });
+  }));

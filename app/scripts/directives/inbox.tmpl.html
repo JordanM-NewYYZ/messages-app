@@ -1,10 +1,47 @@
 <div class="ntg__inbox">
-	<div class="ntg__inbox__search-bar">
-		You have {{ inbox.messages.length && inbox.messages.length || 'no' }} unread messages.
+
+
+							<!-- If no messages -->
+	<div class="ntg__inbox__message-heading">
+		<p>You have {{ inbox.messages.length && inbox.messages.length || 'no' }} messages.</p>
+		<p> {{ inbox.messages.status[unread].size + 'Unread' }} </p>
 	</div>
+	<div class="ntg__inbox__list">
+		<li ng-show="!inbox.messages.length" class="no-messages-available">
+			You currently have no messages.
+		</li>
+							<!-- Search -->
 
 	<div ng-hide="!inbox.messages.length">
 		<input type="text" class="ntg__inbox__search" ng-model="inbox.search" placeholder="Search">
 	</div>
 
+							<!-- If messages -->
+		<div ng-repeat="message in inbox.messages | filter: inbox.search">
+			<div class="inbox__details">
+				<p class="inbox__details-from"> From: {{ message.from }} | </p>
+				<p class="inbox__details-date"> {{ message.date | date: 'dd/MM/yyyy' }} | </p>
+				<p class="inbox__details-status"> {{ message.status }}</p>
+			</div>
+			<div class="inbox__buttons">
+				<a href="" ng-click="inbox.goToMessage(message.id)">
+					View
+				</a>
+				<a href="" ng-click="inbox.deleteMessage(id, $index)">
+					Delete
+				</a>
+			</div>
+		</div>
+
+
 </div>
+
+		
+		
+
+
+
+
+<!-- 				<button ng-click='message.status = !message.status'>
+        			<span>{{message.status ? 'Mark unread' : 'Mark read'}}</span>
+    			</button> -->
