@@ -1,13 +1,11 @@
 <div>
-	<div class="message__title">
-		<h1> {{ message.title }} </h1>
-	</div>
-
 	<div class="message_subject">
-		<h2> {{ message.subject }}</h2>
+		<h1> {{ message.subject }}</h1>
 	</div>
-
+	<div class="message_from">
+		<h2> {{ message.message.from }}</h2>
+	</div>
 	<div class="message_body">
-		<h3> {{ message.body }} </h3>
+		<h3> {{ message.message.body }} </h3>
 	</div>
 </div>
