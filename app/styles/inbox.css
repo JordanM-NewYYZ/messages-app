@@ -1,0 +1,40 @@
+.ntg-inbox-view {
+  padding: 10px;
+}
+
+.inbox__title {
+  border: 2px solid black;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+.ntg__inbox {
+  float: left;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  overflow-y: scroll; 
+  height: 600px;
+}
+
+.ntg__inbox__search {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.inbox__details {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px; 
+  padding-left: 10px;
+}
+
+.inbox__buttons {
+  margin-bottom: 16px;
+}
+
+.ntg__message-view {
+  float: right;
+}

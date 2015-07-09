@@ -10,6 +10,7 @@
 				var deferred = $q.defer();
 				$http.get('json/messages/' + params.id + '.json') //Params is passed in via the directive through $routeParams (passes in an entire object, not just id)
 				.success(function(data) {
+					console.log(data)
 					deferred.resolve(data);
 				})
 				.error(function(data) {
