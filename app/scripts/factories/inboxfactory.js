@@ -15,6 +15,11 @@ angular.module('messagesApp')
       exports.messages = []
 
 
+      exports.getMessages = function() {
+        return $http.get('/json/emails.json'); // This is where a real backend would go in the future
+      }
+
+
 
 
 
