@@ -17,7 +17,6 @@ angular.module('messagesApp')
       //   exports.status.length + count
       //   console.log(count)
       // }
-
  
 
       exports.messages = [];
@@ -43,6 +42,11 @@ angular.module('messagesApp')
 
         return deferred.promise
       };
+
+      exports.deleteMessage = function(id, index) { //Because of the two-way binding, this will now delete the messages.
+        this.messages.splice(index, 1);
+      };
+
 
 
 

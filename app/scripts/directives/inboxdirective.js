@@ -13,6 +13,10 @@
       	this.messages = [];
       	var ctrl = this;
 
+      	this.deleteMessage = function(id, index) {	//Delegates the delete function into the InboxFactory
+      		InboxFactory.deleteMessage(id, index);
+      	};
+
       	InboxFactory.getMessages()	// This is going to do what I did in the controller earlier to retrieve the messages
       		.then(angular.bind(this, function then() { //The bind makes sure that the 'this' on line 24 and the 'this' on line 25 are the same
       			console.log(arguments)
