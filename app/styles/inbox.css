@@ -35,6 +35,6 @@
   margin-bottom: 16px;
 }
 
-.ntg__message-view {
-  float: right;
+.ntg__message-preview {
+  float: left;
 }

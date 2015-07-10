@@ -39,7 +39,7 @@ angular.module('messagesApp')
         this.messages.splice(index, 1);
       };
 
-      exports.goToMessage = function(id) {
+      exports.showMessage = function(id) {
         if (angular.isNumber(id) ) {
           console.log('inbox/message/' + id);
           $location.path('inbox/message/' + id) //Must add $location dependency. This is how to change routes

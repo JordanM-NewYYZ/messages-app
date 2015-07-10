@@ -17,8 +17,8 @@
       		InboxFactory.deleteMessage(id, index);
       	};
 
-      	this.goToMessage = function(id) {
-      		InboxFactory.goToMessage(id);
+      	this.showMessage = function(id) {
+      		InboxFactory.showMessage(id);
       	}
 
       	InboxFactory.getMessages()	// This is going to do what I did in the controller earlier to retrieve the messages
