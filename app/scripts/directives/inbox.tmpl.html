@@ -7,29 +7,36 @@
 		<!-- <p> {{ inbox.messages.status["unread"].size + 'Unread' }} </p> -->
 	</div>
 	<div class="ntg__inbox__list">
-		<div ng-show="!inbox.messages.length" class="no-messages-available">
-		</div>
+		<!-- <div ng-show="!inbox.messages.length" class="no-messages-available"></div> -->
 							<!-- Search -->
 
 	<div ng-hide="!inbox.messages.length">
 		<input type="text" class="ntg__inbox__search" ng-model="inbox.search" placeholder="Search...">
 	</div>
 
+	<select ng-model="orderAttrs">
+		<option value="date">Newest</option>
+		<option value="-date">Oldest</option>
+		<option value="from">From: A-Z</option>
+		<option value="-from">From: Z-A</option>		
+	</select>
+
 							<!-- If messages -->
-		<div ng-repeat="message in inbox.messages | filter: inbox.search">
+		<div ng-repeat="message in inbox.messages | filter: inbox.search | orderBy:orderAttrs">
 			<div class="inbox__details">
 				<p class="inbox__details-from"> From: {{ message.from }} </p>
 				<p class="inbox__details-date"> {{ message.date | date: 'dd/MM/yyyy' }} </p>
 				<p class="inbox__details-status"> {{ message.status }}</p>
 
 			<div class="inbox__buttons">
-				<a href="" ng-click="inbox.showMessage(message.id)">
-					View
-				</a>
-				<a href="" ng-click="inbox.deleteMessage(id, $index)">
+				<button href="" ng-click="showme=true" class="inbox__buttons" ng-hide="showme">Message Details</button>
+					<button href="" ng-click="showme=false" class="inbox__buttons" ng-show="showme">Collapse</button>
+					<p ng-show="showme">{{ message.subject }}</p>
+					<p ng-show="showme">{{ message.body }}</p>
+
+				<a href="" ng-click="inbox.deleteMessage(id, $index)" ng-show="showme">
 					Delete
 				</a>
-			</div>
 			</div>
 		</div>
 </div>

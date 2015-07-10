@@ -19,7 +19,6 @@
 				return deferred.promise;
 			}
 		};
-
 		return exports;
 
   	}));

@@ -37,4 +37,5 @@
 
 .ntg__message-preview {
   float: left;
+  transition: color 0.5s ease-out;
 }

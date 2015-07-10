@@ -40,9 +40,11 @@ angular.module('messagesApp')
       };
 
       exports.showMessage = function(id) {
-        if (angular.isNumber(id) ) {
+        if (angular.active.isNumber(id) ) {
           console.log('inbox/message/' + id);
-          $location.path('inbox/message/' + id) //Must add $location dependency. This is how to change routes
+
+
+          // $location.path('inbox/message/' + id) //Must add $location dependency. This is how to change routes
         }
       }
 
